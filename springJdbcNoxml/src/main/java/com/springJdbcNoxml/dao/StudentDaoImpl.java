@@ -2,14 +2,18 @@ package com.springJdbcNoxml.dao;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Component;
 
 import com.springJdbcNoxml.entities.Student;
 
 import lombok.Data;
 
 @Data
+@Component("studentDaoImpl")
 public class StudentDaoImpl implements StudentDao {
+	@Autowired
 	private JdbcTemplate jdbcTemplate;
 
 	@Override
